@@ -1,28 +1,9 @@
-# Access-Granted
-
-    </div>
-
-    <div class="option">
-      <h2><a href="form_hacking.html">Hacking</a></h2>
-      <p>We crack the code. We own the web.</p>
-    </div>
-
-    <div class="option">
-      <h2><a href="form_eyes.html">Eyes</a></h2>
-      <p>The eyes that see all. Nothing is hidden.</p>
-    </div>
-  </div>
-
-  <footer>
-    &copy; 2025 The All Seeing | Hackers of the Dark Web
-  </footer>
-</body> 
-</html>
-
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-  <title>Stalking Information - The All Seeing</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The All Seeing</title>
   <style>
     /* General styling */
     body {
@@ -53,54 +34,38 @@
       cursor: pointer;
     }
 
+    /* Option menu */
+    .options {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 20px;
+    }
+
+    .option {
+      padding: 20px;
+      border: 1px solid #00FF41;
+      border-radius: 10px;
+    }
+
+    .option a {
+      color: #00FF41;
+      text-decoration: none;
+    }
+
+    footer {
+      margin-top: 30px;
+      font-size: 12px;
+      color: #888;
+    }
+
     /* Disclaimer styling */
     .disclaimer {
       font-size: 12px;
       color: #ff0000;
       margin-bottom: 20px;
     }
-  </style>
-</head>
-<body>
-  <h1>Stalking Information Form</h1>
-  
-  <p class="disclaimer">Disclaimer: This is purely for entertainment purposes. Do not input any real information.</p>
-  
-  <form action="eye_page.html">
-    <p>Target Name:</p>
-    <input type="text" name="target" required><br>
-    
-    <p>Location:</p>
-    <input type="text" name="location" required><br>
-    
-    <p>Describe what we need to know:</p>
-    <input type="text" name="details" required><br>
 
-    <button type="submit">Submit</button>
-  </form>
-</body>
-</html>
-
-<!DOCTYPE html>
-<html>
-<head>
-  <title>The All Seeing - Your Offering</title>
-  <style>
-    /* General styling */
-    body {
-      background-color: #000;
-      color: #00FF41;
-      font-family: 'Courier New', Courier, monospace;
-      margin: 0;
-      padding: 0;
-      text-align: center;
-    }
-
-    h1, p {
-      text-shadow: 0 0 5px #00FF41, 0 0 10px #00FF41, 0 0 20px #00FF41;
-    }
-
-    /* Eye container */
+    /* Eye page */
     .eye-container {
       margin: 20px auto;
       position: relative;
@@ -110,7 +75,6 @@
       animation: lookAround 8s infinite ease-in-out;
     }
 
-    /* Eyeball */
     .eye {
       width: 100%;
       height: 100%;
@@ -118,10 +82,9 @@
       border-radius: 50%;
       position: relative;
       box-shadow: 0 0 50px rgba(0, 255, 65, 0.5);
-      overflow: hidden; /* to keep the eyelid within the eye */
+      overflow: hidden;
     }
 
-    /* Pupil */
     .pupil {
       position: absolute;
       width: 50px;
@@ -135,13 +98,11 @@
       animation: pupilMove 4.5s infinite ease-in-out;
     }
 
-    /* Eyelids (top and bottom) */
     .eyelid-top, .eyelid-bottom {
       position: absolute;
       width: 100%;
       height: 50%;
-      background: #000; /* Eyelid color (black) */
-      border-radius: 0%;
+      background: #000;
       z-index: 3;
     }
 
@@ -163,7 +124,7 @@
         transform: scaleY(1);
       }
       25%, 55% {
-        transform: scaleY(0.1); /* Eyelids come together */
+        transform: scaleY(0.1);
       }
     }
 
@@ -175,7 +136,6 @@
       75% { top: 40%; left: 50%; }
     }
 
-    /* Eyeball looking around */
     @keyframes lookAround {
       0%, 100% { transform: rotate(0deg); }
       50% { transform: rotate(10deg); }
@@ -194,59 +154,77 @@
       font-weight: bold;
     }
 
-    /* Redirect after 5 seconds */
-    @keyframes redirect {
-      100% { opacity: 0; }
-    }
-
-    .fade-out {
-      animation: redirect 5s forwards;
-    }
-  </style>
-  <script>
-    setTimeout(() => {
-      window.location.href = "final_page.html";
-    }, 5000);
-  </script>
-</head>
-<body>
-  <h1>The All Seeing Has Heard Your Prayer</h1>
-  
-  <div class="eye-container">
-    <div class="eye">
-      <div class="pupil"></div>
-      <div class="eyelid-top"></div>
-      <div class="eyelid-bottom"></div>
-    </div>
-  </div>
-  
-  <p class="text-below">Offer us your eyes.</p>
-  
-  <p class="bold-text">OFFER US YOUR EYES</p>
-</body>
-</html><!DOCTYPE html>
-<html>
-<head>
-  <title>The All Seeing - Final</title>
-  <style>
-    /* General styling */
-    body {
+    /* Final Page Styling */
+    .final-page {
       background-color: #000;
       color: #ff0000;
       font-family: 'Courier New', Courier, monospace;
-      margin: 0;
-      padding: 0;
       text-align: center;
     }
 
-    h1 {
+    h1.final-text {
       font-size: 50px;
       margin-top: 20%;
       text-shadow: 0 0 5px #ff0000, 0 0 10px #ff0000, 0 0 20px #ff0000;
     }
   </style>
+  <script>
+    function redirectToFinalPage() {
+      setTimeout(() => {
+        window.location.href = "#final";
+      }, 5000);
+    }
+  </script>
 </head>
 <body>
-  <h1>Your Eyes Will Be Mine</h1>
+  <h1>Welcome to The All Seeing</h1>
+  <div class="options">
+    <div class="option">
+      <h2><a href="#hacking">Hacking</a></h2>
+      <p>We crack the code. We own the web.</p>
+    </div>
+    <div class="option">
+      <h2><a href="#eye-page">Eyes</a></h2>
+      <p>The eyes that see all. Nothing is hidden.</p>
+    </div>
+  </div>
+
+  <footer>
+    &copy; 2025 The All Seeing | Hackers of the Dark Web
+  </footer>
+
+  <!-- Form for Hacking Info -->
+  <div id="hacking" style="margin-top:50px;">
+    <h1>Stalking Information Form</h1>
+    <p class="disclaimer">Disclaimer: This is purely for entertainment purposes. Do not input any real information.</p>
+    <form action="#eye-page">
+      <p>Target Name:</p>
+      <input type="text" name="target" required><br>
+      <p>Location:</p>
+      <input type="text" name="location" required><br>
+      <p>Describe what we need to know:</p>
+      <input type="text" name="details" required><br>
+      <button type="submit" onclick="redirectToFinalPage()">Submit</button>
+    </form>
+  </div>
+
+  <!-- Eye Page -->
+  <div id="eye-page">
+    <h1>The All Seeing Has Heard Your Prayer</h1>
+    <div class="eye-container">
+      <div class="eye">
+        <div class="pupil"></div>
+        <div class="eyelid-top"></div>
+        <div class="eyelid-bottom"></div>
+      </div>
+    </div>
+    <p class="text-below">Offer us your eyes.</p>
+    <p class="bold-text">OFFER US YOUR EYES</p>
+  </div>
+
+  <!-- Final Page -->
+  <div id="final" class="final-page">
+    <h1 class="final-text">Your Eyes Will Be Mine</h1>
+  </div>
 </body>
 </html>
